@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));//2°
 app.use(bodyParser.json());//3°
 app.use(express.static(path.join(__dirname, 'public')));//4°
 
+const readObject= require('../readObject.js')
 //________________________________________________
 
 const dbPath = path.join(__dirname, "../db", "db.json");
@@ -20,17 +21,14 @@ fs.readFile(dbPath, 'utf-8', (err, data)=>{
     }
     try{
         books = JSON.parse(data);
-        console.log('The data has been updated succesfuly', data)
+        console.log('The data has been updated succesfuly')
     }catch(parseErr){
         console.error('Error parsing Json:', parseErr)
     }
-    
 });
 
 function printBookByCategory(category){
-    console.log("Books array:", books); // Depuración
     const filteredBooks = books.filter(b => b.category === category);
-    console.log("Filtered books:", filteredBooks); // Depuración
     if (filteredBooks.length === 0) {
         //Acá se filtra segun esas condiciones y luego se le aplica .map a cada book obtenido luego del filtro.
         return `<!DOCTYPE html>
@@ -74,5 +72,3 @@ function printBookByCategory(category){
         </html>`;
 }
 module.exports = printBookByCategory;
-
-//<footer>FOOTER</footer>

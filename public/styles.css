@@ -1,6 +1,8 @@
 body{
     background-color:#e4dbbd;
     margin:0;
+    height: 100%;
+
     
 }
 
@@ -94,7 +96,10 @@ input{
 }
 
 footer{
-    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
     padding: 25px;
     justify-content: center;
     background-color:#ca9b7f;

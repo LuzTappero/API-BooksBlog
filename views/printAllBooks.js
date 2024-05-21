@@ -12,13 +12,18 @@ app.use(express.static(path.join(__dirname, 'public')));//4°
 
 const dbPath = path.join(__dirname, "../db", "db.json");
 let books= [];
+
 fs.readFile(dbPath, 'utf-8', (err, data)=>{
         if (err){
             console.error(err);
         return;
     }
-    books = JSON.parse(data);
-    console.log('The data has been update succesfuly')
+    try{
+        books = JSON.parse(data);
+        console.log('The data has been updated succesfuly')
+    }catch(parseErr){
+        console.error('Error parsing Json:', parseErr)
+    }
 });
 
 function printAllBooks(){
