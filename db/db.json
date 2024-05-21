@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "author": "JK Rowling",
+    "category": "Fantasy"
+  },
+  {
+    "id": 2,
+    "name": "Emma",
+    "author": "Jane Austen",
+    "category": "romance"
+  },
+  {
+    "id": 3,
+    "name": "The Little Prince",
+    "author": "A. de Saint-Exupéry",
+    "category": "Children's Literature"
+  },
+  {
+    "id": 4,
+    "name": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "category": "Fantasy"
+  },
+  {
+    "id": 5,
+    "name": "Hamlet",
+    "author": "William Shakespeare",
+    "category": "Tragedy"
+  },
+  {
+    "id": 6,
+    "name": "Book6",
+    "author": "author6",
+    "category": "category6"
+  },
+  {
+    "id": 7,
+    "name": "Book7",
+    "author": "author7",
+    "category": "category7"
+  },
+  {
+    "id": 8,
+    "name": "ocho",
+    "author": "ocho",
+    "category": "ocho"
+  },
+  {
+    "id": 9,
+    "name": "nueve",
+    "author": "nueve",
+    "category": "nueve"
+  }
+]
