@@ -31,26 +31,14 @@
   },
   {
     "id": 6,
-    "name": "Book6",
-    "author": "author6",
-    "category": "category6"
+    "name": "seis",
+    "author": "seis",
+    "category": "seis"
   },
   {
     "id": 7,
-    "name": "Book7",
-    "author": "author7",
-    "category": "category7"
-  },
-  {
-    "id": 8,
-    "name": "ocho",
-    "author": "ocho",
-    "category": "ocho"
-  },
-  {
-    "id": 9,
-    "name": "nueve",
-    "author": "nueve",
-    "category": "nueve"
+    "name": "siete",
+    "author": "siete",
+    "category": "siete"
   }
 ]

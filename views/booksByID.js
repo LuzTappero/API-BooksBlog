@@ -1,31 +1,14 @@
 const fs= require("fs");
+const path = require("path");
 const express= require ('express');
 const app = express();
-const path = require("path");
-app.use(express.json()); //1°
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));//2°
-app.use(bodyParser.json());//3°
-app.use(express.static(path.join(__dirname, 'public')));//4°
+const readBookFromJson = require('./readbooks.js');
 
-
-//________________________________________________
-
-const dbPath = path.join(__dirname, "../db", "db.json");
-let books= [];
-
-fs.readFile(dbPath, 'utf-8', (err, data)=>{
-        if (err){
-            console.error(err);
-        return;
-    }
-    books = JSON.parse(data);
-    console.log('The data has been updated succesfuly')
-});
-
-function printBookById(id){
-    const book = books.find(b => b.id === parseInt(id));
-
+async function printBookById(id){
+try{
+    let books = await readBookFromJson();
+    const book =  books.find(b => b.id === parseInt(id));
+    console.log('Luego de find id me devuelve el siguiente elemento', book);
     if (!book) {
         return `<!DOCTYPE html>
         <html lang="en">
@@ -36,11 +19,11 @@ function printBookById(id){
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <h1 class="main__title">Book not found</h1>
+            <h1 class="main__title">Book not found</h1>
+        <footer>FOOTER</footer>
         </body>
         </html>`;
     }
-
     return `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -61,9 +44,27 @@ function printBookById(id){
             <li class="li__description">Author: ${book.author}</li>
             <li class="li__description">Category: ${book.category}</li>
         </div>
+        <footer>FOOTER</footer>
         </body>
         </html>`;
-}
+    }
+    catch(err){
+        console.error('Failed to read books by author:', err);
+        return `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="/styles.css">
+        </head>
+        <body>
+            <h1 class="main__title">Error loading books</h1>
+        <footer>FOOTER</footer>
+        </body>
+        </html>`;
+    };
+};
 
 module.exports = printBookById;
 
