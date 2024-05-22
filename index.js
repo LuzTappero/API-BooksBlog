@@ -2,13 +2,13 @@ const fs= require("fs");
 const path = require("path");
 const express= require ('express');
 const app = express();
-//__________________________________________________________________
+//_______________________________________________________________
 app.use(express.json()); //1°
 const bodyParser = require('body-parser');//npm install body-parser
 app.use(bodyParser.urlencoded({ extended: false }));//2°
 app.use(bodyParser.json());//3°
 app.use(express.static(path.join(__dirname, 'public')));//4°
-//__________________________________________________________________
+//________________________________________________________________
 
 const printAllBooks = require('./views/printAllBooks.js');
 const printBookById = require('./views/booksByID.js');
