@@ -1,17 +1,11 @@
-const fs= require("fs");
-const path = require("path");
-const express= require ('express');
-const app = express();
-const readBookFromJson = require('./readbooks.js');
-
+const readBookFromJson = require('../utils/readbooks.js');
 
 async function printBookByName(name){
 try{
-    console.log('Entrando a filtrar by name');
     let books= await readBookFromJson();
-    const filteredBooks = books.filter(b => b.name === name);
+    let filteredBooks = books.filter(b => b.name === (name));
     console.log('luego de filtrar obtiene el siguiente elemento:', filteredBooks);
-    if (filteredBooks.length === 0) {
+    if(filteredBooks.length === 0){
         return`<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -21,6 +15,7 @@ try{
         <link rel="stylesheet" href="/styles.css">
     </head>
         <body>
+        <header class="header">HEADER</header>
             <h1 class="main__title">Book not found</h1>
         <footer>FOOTER</footer>
         </body>
@@ -63,6 +58,7 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
         <footer>FOOTER</footer>
         </body>

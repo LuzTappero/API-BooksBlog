@@ -28,17 +28,5 @@
     "name": "Hamlet",
     "author": "William Shakespeare",
     "category": "Tragedy"
-  },
-  {
-    "id": 6,
-    "name": "seis",
-    "author": "seis",
-    "category": "seis"
-  },
-  {
-    "id": 7,
-    "name": "siete",
-    "author": "siete",
-    "category": "siete"
   }
 ]

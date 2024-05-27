@@ -1,9 +1,4 @@
-const fs= require("fs");
-const path = require("path");
-const express= require ('express');
-const app = express();
 const readBookFromJson = require('./readbooks.js');
-
 
 async function printBookByAuthor(author){
 try{
@@ -20,6 +15,7 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
             <body>
+            <header class="header">HEADER</header>
                 <h1 class="main__title">Book not found</h1>
             <footer>FOOTER</footer>
             </body>
@@ -60,6 +56,7 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
         </body>
         <footer>FOOTER</footer>

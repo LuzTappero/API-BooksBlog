@@ -1,15 +1,15 @@
-const fs= require("fs");
 const path = require("path");
 const express= require ('express');
 const app = express();
-const readBookFromJson = require('./readbooks.js');
+
+const readBookFromJson = require('../utils/readbooks.js')
 
 async function printBookById(id){
 try{
-    let books = await readBookFromJson();
-    const book =  books.find(b => b.id === parseInt(id));
+    const books = await readBookFromJson();
+    const book = books.find(b => b.id === parseInt(id));
     console.log('Luego de find id me devuelve el siguiente elemento', book);
-    if (!book) {
+    if (!book){
         return `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -19,6 +19,7 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        
             <h1 class="main__title">Book not found</h1>
         <footer>FOOTER</footer>
         </body>
@@ -59,6 +60,7 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
         <footer>FOOTER</footer>
         </body>
@@ -68,4 +70,3 @@ try{
 
 module.exports = printBookById;
 
-//<footer>FOOTER</footer>

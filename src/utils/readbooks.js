@@ -2,15 +2,15 @@ const fs= require("fs/promises");
 const path = require("path");
 const express= require ('express');
 const app = express();
-app.use(express.json()); //1°
+app.use(express.json()); 
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));//2°
-app.use(bodyParser.json());//3°
-app.use(express.static(path.join(__dirname, 'public')));//4°
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 const { read } = require('fs');
 
 
-const dbPath = path.join(__dirname, "../db", "db.json");
+const dbPath = path.join(__dirname, "../../db", "db.json");
 let books= [];
 async function readBookFromJson(){
     try{
@@ -22,5 +22,4 @@ async function readBookFromJson(){
         throw err;
     }
 }
-
 module.exports = readBookFromJson;

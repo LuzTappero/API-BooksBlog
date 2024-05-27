@@ -1,8 +1,7 @@
-const fs= require("fs");
 const express= require ('express');
 const app = express();
 const path = require("path");
-const readBookFromJson = require('./readbooks.js');
+const readBookFromJson = require('../utils/readbooks.js');
 
 //__________________________________________________
 async function printAllBooks(){
@@ -26,10 +25,10 @@ async function printAllBooks(){
     <body>
        <header class="header">HEADER</header>
         <h1 class="main__title">All Books</h1>
-        <div class"book_separator">
-            ${bookList}
-        </div>
-    </ul>
+        
+            <div class="book__">
+                ${bookList}
+            </div>
     <footer>FOOTER</footer>
     </body>
     </html>`;
@@ -44,6 +43,7 @@ async function printAllBooks(){
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
         </body>
         <footer>FOOTER</footer>
