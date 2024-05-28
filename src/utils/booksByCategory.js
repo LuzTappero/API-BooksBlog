@@ -14,11 +14,13 @@ if (filteredBooks.length === 0) {
             <title>Document</title>
             <link rel="stylesheet" href="/styles.css">
         </head>
+        <div class="wrapper">
             <body>
             <header class="header">HEADER</header>
-                <h1 class="main__title">Book not found</h1>
-            <footer>FOOTER</footer>
-            </body>
+            <h1 class="main__title">Book not found</h1>
+        </div>
+        <footer>FOOTER</footer>
+        </body>
         </html>`;
     }
     let booksHtml= filteredBooks.map(book=>`     
@@ -39,9 +41,11 @@ if (filteredBooks.length === 0) {
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
+    <div class="wrapper">
         <header class="header">HEADER</header>
         <h1 class="main__title">Find your favorite book by Category</h1>
             ${booksHtml}
+    </div>
     <footer>FOOTER</footer>
     </body>
     </html>`;
@@ -57,8 +61,10 @@ catch(err){
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <div class="wrapper">
         <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
+        </div>
         <footer>FOOTER</footer>
         </body>
         </html>`;

@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header class="header">HEADER</header>
-    <h1 class="main__title">Upload a new Book</h1>
-    <div class="container">
+    <div class="wrapper">
+        <header class="header">HEADER</header>
         
-        <form class="form" action="books/submit" method="post">
-            <input type="text" placeholder="Book Name" name="name" id="
-            name"> 
-            <input type="text" placeholder="Book Author" name="author" id="author"> 
-            <input type="text" placeholder="Book Category" name="category" id="category">
-            <button class="submit" type="submit">Submit</button>
-        </form>
+        <div class="container">
+
+            <h1 class="main__title-form">Upload a new Book</h1>
+            <form class="form" action="/books/submit" method="post">
+                
+                <input type="text" placeholder="Book Name" name="name" id="
+                name"> 
+                <input type="text" placeholder="Book Author" name="author" id="author"> 
+                <input type="text" placeholder="Book Category" name="category" id="category">
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>
     </div>
     <footer>FOOTER</footer>
 </body>

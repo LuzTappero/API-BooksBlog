@@ -1,11 +1,11 @@
 const modelBook = require('../models/modelBook.js')
-//Desde el controlador se puede llamar a más de un modelo
 const { get } = require('../routes/routesBooks.js')
 const path = require("path");
 const writeBookInJson = require('../utils/writeBook.js');
 const express= require('express')
 const app= express()
 const bodyParser = require('body-parser');
+const bookModel = require('../models/modelBook.js');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -55,5 +55,19 @@ class BookController{
             return res.status(500).json({ error: 'Error creating book' });
         }
     }
+    //Intentar pasar esto a un modeloCreate.
+    static async delete (req,res){
+        const id = req.params.id;
+        const result= await bookModel.delete(id)
+            if (result === false){return res.status(404).send({message: "book not found to delete"})}
+            return res.send({message: 'Book deleted'})
+    }
+    static async update(req,res){
+        const id = req.params.id;
+        const updatedBook= await bookModel.update(id)
+        return res.send(updatedBook)
+    }
 }
+
+
 module.exports = BookController;

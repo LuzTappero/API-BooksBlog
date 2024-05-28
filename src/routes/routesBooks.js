@@ -7,12 +7,14 @@ const BookController = require('../controllers/booksControllers.js')
 //Hacer un try-catch en un middleware porque es un perno hacer un try-catch en cada get.
 booksRouter.get('/', BookController.getAll)
 booksRouter.get('/form', BookController.showForm)
-booksRouter.post('/submit', BookController.create)
 
 booksRouter.get('/id/:id', BookController.getByID)
 booksRouter.get('/name/:name', BookController.getByName)
 booksRouter.get('/category/:category', BookController.getByCategory)
 booksRouter.get('/author/:author', BookController.getByauthor)
 
+booksRouter.post('/books/submit', BookController.create)
+booksRouter.delete('/id/:id', BookController.delete)
+booksRouter.patch('/name/:name', BookController.update)
 
 module.exports= booksRouter;

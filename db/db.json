@@ -28,5 +28,11 @@
     "name": "Hamlet",
     "author": "William Shakespeare",
     "category": "Tragedy"
+  },
+  {
+    "id": 6,
+    "name": "Hola",
+    "author": "hola",
+    "category": "hola"
   }
 ]

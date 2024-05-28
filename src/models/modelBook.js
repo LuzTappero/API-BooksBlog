@@ -34,6 +34,23 @@ class bookModel{
         const books= await printBookByCategory(category);
         return books
     }
-       
+    static async delete (id){
+        const bookIndex= books.findIndex(book=> book.id === parseInt(id))
+        if(bookIndex === -1) return false;
+        books.splice(bookIndex, 1)
+        return true;
+    }
+    static async update (id){
+    const bookIndex= books.findIndex(book=> book.id === parseInt(id))
+    if(bookIndex === -1) return false;
+
+    books[bookIndex] = {
+        ...books[bookIndex], 
+        ...input
+    }
+    }
+
 }
+
+
 module.exports = bookModel;

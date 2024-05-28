@@ -14,11 +14,13 @@ try{
         <title>Document</title>
         <link rel="stylesheet" href="/styles.css">
     </head>
-        <body>
-        <header class="header">HEADER</header>
-            <h1 class="main__title">Book not found</h1>
+    <body>
+        <div class="wrapper">
+            <header class="header">HEADER</header>
+                <h1 class="main__title">Book not found</h1>
+        </div>
         <footer>FOOTER</footer>
-        </body>
+    </body>
     </html>`;
     }
     let booksHtml= filteredBooks.map(book=>`     
@@ -39,10 +41,13 @@ try{
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
-    <header class="header">HEADER</header>
-    <h1 class="main__title">Find your favorite book by Category</h1>
-        ${booksHtml}
+    <div class="wrapper">
+        <header class="header">HEADER</header>
+            <h1 class="main__title">Find your favorite book by Name</h1>
+                ${booksHtml}
+    </div>
     <footer>FOOTER</footer>
+    
     </body>
     </html>`;
     
@@ -58,9 +63,11 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <header class="header">HEADER</header>
-            <h1 class="main__title">Error loading books</h1>
-        <footer>FOOTER</footer>
+        <div class="wrapper">
+            <header class="header">HEADER</header>
+                <h1 class="main__title">Error loading books</h1>
+            <footer>FOOTER</footer>
+        </div>
         </body>
         </html>`;
     }

@@ -19,8 +19,10 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        
+        <div class="wrapper">
+        <header class="header">HEADER </header>
             <h1 class="main__title">Book not found</h1>
+        </div>
         <footer>FOOTER</footer>
         </body>
         </html>`;
@@ -34,16 +36,18 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <header class="header">HEADER </header>
+        <div class="wrapper">
+            <header class="header">HEADER </header>
 
-        <h1 class="main__title">Find your favorite book by ID</h1>
-        <div class="book__content">
-            <li class="li__description">
-                <h4 class="bookname">${book.name}</h4>
-            </li>
-            <li class="li__description">ID "${book.id}"</li>
-            <li class="li__description">Author: ${book.author}</li>
-            <li class="li__description">Category: ${book.category}</li>
+            <h1 class="main__title">Find your favorite book by ID</h1>
+            <div class="book__content">
+                <li class="li__description">
+                    <h4 class="bookname">${book.name}</h4>
+                </li>
+                <li class="li__description">ID "${book.id}"</li>
+                <li class="li__description">Author: ${book.author}</li>
+                <li class="li__description">Category: ${book.category}</li>
+            </div>
         </div>
         <footer>FOOTER</footer>
         </body>
@@ -60,8 +64,10 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <header class="header">HEADER</header>
+        <div class="wrapper">
+            <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
+        </div> 
         <footer>FOOTER</footer>
         </body>
         </html>`;

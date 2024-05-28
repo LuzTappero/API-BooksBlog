@@ -1,26 +1,30 @@
-body{
+html, body{
     background-color:#e4dbbd;
     margin:0;
-    min-height: 60vh;
+    height: 100%;
 }
 
-/* *{
-    box-sizing: border-box;
-} */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .header{
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     background-color:#ca9b7f;
     font-weight: bold;
 }
 
 .main__title{
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    margin:10px;
-    align-content: center;
+    text-align: center;
+}
+
+.container__listAll{
+    padding: 10px;
+    margin: 0px;
+    border-radius: 15px;
 }
 
 .book__content{
@@ -52,14 +56,19 @@ body{
     margin-left: 20px;
 }
 
+/* Start Form newBook */
+
+.main__title-form{
+   margin: auto;
+   text-align: center;
+   margin-bottom: 20px;
+}
 .container{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    border: 1px solid grey;
-    margin:25px;
+    padding: 80px;
+    margin: 40px;
     border-radius: 15px;
 }
+
 
 .form {
     display: flex;
@@ -71,11 +80,15 @@ body{
 }
 
 input{
-    border: 1px solid black;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 3px solid black;
+    /* border-left: 3px solid black; */
+    /* border-top: 3px solid black; */
+    border-radius: 8px;
     padding: 0.9rem;
     margin: 0.5rem;
     font-size: 15px;
+    background-color: transparent;
 }
 
 .submit{
@@ -93,8 +106,10 @@ input{
     transition: 0.4s;
 }
 
+/* End Form newBook */
+
 footer{
-    padding: 30px;
+    padding: 25px;
     background-color:#ca9b7f;
     font-size: 15px;
     font-weight: bold;
@@ -140,4 +155,4 @@ footer{
     margin-bottom: 15px;
 }
 
-/* Start Modal window */
+/* End Modal window */

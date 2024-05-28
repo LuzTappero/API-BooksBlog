@@ -8,12 +8,16 @@ async function printAllBooks(){
     try{
         let books= await readBookFromJson();
         let bookList = books.map(book=>`
-        <div class="container">
-            <li class="li__description"><h4 class="bookname"> ${book.name}</h4></li>
-            <li class="li__description">ID "${book.id}"</li>
-            <li class="li__description">${book.author}</li>
-            <li class="li__description">${book.category}</li>
-        </div>`).join('');
+        <div class="container__listAll">
+            <div class= "book__content">
+                <li class="li__description"><h4 class="bookname"> ${book.name}</h4></li>
+                <li class="li__description">ID "${book.id}"</li>
+                <li class="li__description">${book.author}</li>
+                <li class="li__description">${book.category}</li>
+                </div>
+            </div>`).join('');
+            
+
         return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -23,14 +27,15 @@ async function printAllBooks(){
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
-       <header class="header">HEADER</header>
-        <h1 class="main__title">All Books</h1>
-        
-            <div class="book__">
+    <div class="wrapper">
+       <header class="header">HEADER
+       </header>
+            <h1 class="main__title">All Books</h1>
                 ${bookList}
-            </div>
+    </div>
     <footer>FOOTER</footer>
     </body>
+    
     </html>`;
     }catch (err){
         console.error('Failed to read all books:', err);
@@ -43,10 +48,13 @@ async function printAllBooks(){
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <header class="header">HEADER</header>
-            <h1 class="main__title">Error loading books</h1>
-        </body>
+        <div class="wrapper">
+            <header class="header">HEADER</header>
+                <h1 class="main__title">Error loading books</h1>
+        
+        </div>
         <footer>FOOTER</footer>
+        </body>
         </html>`;
     };
 };

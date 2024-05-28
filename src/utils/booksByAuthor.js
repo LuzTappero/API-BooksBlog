@@ -14,11 +14,13 @@ try{
             <title>Document</title>
             <link rel="stylesheet" href="/styles.css">
         </head>
+        <div class="wrapper">
             <body>
             <header class="header">HEADER</header>
                 <h1 class="main__title">Book not found</h1>
             <footer>FOOTER</footer>
             </body>
+        </div>
         </html>`;}
     let booksHtml= filteredBooks.map(book=>`     
         <div class="book__content">
@@ -38,11 +40,13 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
-        <header class="header">HEADER</header>
-        <h1 class="main__title">Find your favorite book by Author</h1>
-            ${booksHtml}
-        </body>
+        <div class="wrapper">
+            <header class="header">HEADER</header>
+                <h1 class="main__title">Find your favorite book by Author</h1>
+                ${booksHtml}
+        </div>
         <footer>FOOTER</footer>
+        </body>
         </html>`;
     }
     catch(err){
@@ -56,10 +60,12 @@ try{
             <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+        <div class="wrapper">
         <header class="header">HEADER</header>
             <h1 class="main__title">Error loading books</h1>
-        </body>
+        </div>
         <footer>FOOTER</footer>
+        </body>
         </html>`;
     };
 };
