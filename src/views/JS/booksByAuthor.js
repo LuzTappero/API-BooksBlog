@@ -1,4 +1,4 @@
-const readBookFromJson = require('./readbooks.js');
+const readBookFromJson = require('../../utils/readbooks.js')
 
 async function printBookByAuthor(author){
 try{

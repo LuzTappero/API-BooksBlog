@@ -1,5 +1,6 @@
 html, body{
-    background-color:#e4dbbd;
+    background-color: #EBE1D1;
+    /* background-color:#e4dbbd; */
     margin:0;
     height: 100%;
 }
@@ -12,8 +13,10 @@ html, body{
 
 .header{
     text-align: center;
-    padding: 25px;
-    background-color:#ca9b7f;
+    padding: 35px;
+    background-color: #B79677;
+    color:white;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -22,6 +25,8 @@ html, body{
 }
 
 .container__listAll{
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     margin: 0px;
     border-radius: 15px;
@@ -30,18 +35,13 @@ html, body{
 .book__content{
     border: 0.5px solid rgb(119, 118, 118);
     border-radius: 10px;
-    margin:20px;
-    padding: 10px;
-    background-color: rgb(233, 215, 192);
-    border: 1px solid grey;
+    margin:8px;
+    padding: 15px;
+    border: 2px solid #815423;
 }
 
 .book__content:hover{
     cursor: pointer;
-    background-color:#ca9b7f;
-    opacity: 90%;
-    transition: 0.5s;
-    border: 1px solid grey;
 }
 
 .bookname{
@@ -56,103 +56,100 @@ html, body{
     margin-left: 20px;
 }
 
-/* Start Form newBook */
+footer{
+    padding: 35px;
+    background-color: #B79677;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* SHOW FORM-- Upload a new book*/
+
 
 .main__title-form{
    margin: auto;
    text-align: center;
    margin-bottom: 20px;
 }
-.container{
+
+.container__form{
     padding: 80px;
     margin: 40px;
-    border-radius: 15px;
 }
-
 
 .form {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: auto;
 }
 
 input{
     border: none;
-    border-bottom: 3px solid black;
-    /* border-left: 3px solid black; */
-    /* border-top: 3px solid black; */
+    border-bottom: 2px solid black;
     border-radius: 8px;
-    padding: 0.9rem;
-    margin: 0.5rem;
-    font-size: 15px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 20px;
     background-color: transparent;
 }
 
 .submit{
     border: 1px solid black;
     border-radius: 10px;
-    padding: 0.9rem;
-    margin: 0.5rem;
+    padding: 10px;
+    margin: 15px;
     font-size: 15px;
     cursor: pointer;
 }
 
 .submit:hover{
-    background-color:#ca9b7f;
+    background-color: #B79677;
     border: 2px solid black;
     transition: 0.4s;
 }
 
 /* End Form newBook */
 
-footer{
-    padding: 25px;
-    background-color:#ca9b7f;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Start Modal window */
+/* start book Created OK- Window advice */
 
 .container__modalWindowFromPost{
-
+    display: flex;
+    flex-direction: column;
     background-color:transparent;
     border: 1px solid black;
     border-radius: 20px;
-    width: 400px;
-    height: 200px;
-    padding:60px;
+    padding:70px;
     margin:auto;
-    margin-top: 250px;
-    box-shadow: 12px 12px 5px 5px rgb(87, 86, 86);
+    box-shadow: 5px 5px 1px 1px rgb(87, 86, 86);
 }
 
 .button__postForm{
-    width: 200px;
-    height:50px;
+    padding: 15px;
     margin:auto;
-    margin-left: 35px;
     font-size: 15px;
+    background-color: #B79677;
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .button__postForm:hover{
-    background-color: #c9a38c;
     cursor: pointer;
-    border: 2px solid black;
-    transition: 0.5s;
+    background-color: #a58d75;
 }
 
 .title__added{
     font-size: 20px;
     justify-content: center;
+    padding: 15px;
     margin: auto;
-    margin-bottom: 15px;
 }
 
-/* End Modal window */
+.a__linkToAllBooks{
+    color:black;
+    text-decoration: none;
+}
+
+/* End book Created OK- Window advice */

@@ -11,11 +11,11 @@ const { read } = require('fs');
 
 
 const dbPath = path.join(__dirname, "../../db", "db.json");
-let books= [];
+
 async function readBookFromJson(){
     try{
         const data= await fs.readFile(dbPath, 'utf-8');
-        books= JSON.parse(data)
+        const books= JSON.parse(data)
         return books;
     }catch(err){
         console.error('Error reading or parsing the file', err);

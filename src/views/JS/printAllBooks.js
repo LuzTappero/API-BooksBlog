@@ -1,7 +1,7 @@
 const express= require ('express');
 const app = express();
 const path = require("path");
-const readBookFromJson = require('../utils/readbooks.js');
+const readBookFromJson = require('../../utils/readbooks.js')
 
 //__________________________________________________
 async function printAllBooks(){

@@ -2,7 +2,7 @@ const path = require("path");
 const express= require ('express');
 const app = express();
 
-const readBookFromJson = require('../utils/readbooks.js')
+const readBookFromJson = require('../../utils/readbooks.js')
 
 async function printBookById(id){
 try{
