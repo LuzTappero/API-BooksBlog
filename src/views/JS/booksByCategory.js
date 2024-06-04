@@ -1,8 +1,8 @@
-const readBookFromJson = require('../../utils/readbooks.js')
+const readDB = require('../../utils/readDB.js')
 
 async function printBookByCategory(category){
 try{
-    let books= await readBookFromJson();
+    const books= await readDB();
     const filteredBooks = books.filter(b => b.category === category);
     console.log('luego de filtrar obtiene el siguiente elemento:', filteredBooks);
 if (filteredBooks.length === 0) {

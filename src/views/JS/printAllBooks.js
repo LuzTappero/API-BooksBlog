@@ -1,12 +1,9 @@
-const express= require ('express');
-const app = express();
-const path = require("path");
-const readBookFromJson = require('../../utils/readbooks.js')
+const readDB = require('../../utils/readDB.js')
 
 //__________________________________________________
 async function printAllBooks(){
+    const books= await readDB();
     try{
-        let books= await readBookFromJson();
         let bookList = books.map(book=>`
         <div class="container__listAll">
             <div class= "book__content">
@@ -14,10 +11,15 @@ async function printAllBooks(){
                 <li class="li__description">ID "${book.id}"</li>
                 <li class="li__description">${book.author}</li>
                 <li class="li__description">${book.category}</li>
-                </div>
-            </div>`).join('');
             
-
+                <button class="button__delete">
+                    <a class="delete-link" href="/books/delete/id">DELETE BOOK</a>
+                </button>
+                <button class="button__update">
+                    <a href="/books/update">UPDATE BOOK</a>
+                </button>
+            </div>
+        </div>`).join('');
         return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -51,7 +53,6 @@ async function printAllBooks(){
         <div class="wrapper">
             <header class="header">HEADER</header>
                 <h1 class="main__title">Error loading books</h1>
-        
         </div>
         <footer>FOOTER</footer>
         </body>

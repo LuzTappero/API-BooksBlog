@@ -2,11 +2,11 @@ const path = require("path");
 const express= require ('express');
 const app = express();
 
-const readBookFromJson = require('../../utils/readbooks.js')
+const readDB = require('../../utils/readDB.js')
 
 async function printBookById(id){
 try{
-    const books = await readBookFromJson();
+    const books = await readDB();
     const book = books.find(b => b.id === parseInt(id));
     console.log('Luego de find id me devuelve el siguiente elemento', book);
     if (!book){

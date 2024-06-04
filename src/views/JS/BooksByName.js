@@ -1,8 +1,8 @@
-const readBookFromJson = require('../../utils/readbooks.js')
+const readDB = require('../../utils/readDB.js')
 
 async function printBookByName(name){
 try{
-    let books= await readBookFromJson();
+    const books= await readDB();
     let filteredBooks = books.filter(b => b.name === (name));
     console.log('luego de filtrar obtiene el siguiente elemento:', filteredBooks);
     if(filteredBooks.length === 0){
