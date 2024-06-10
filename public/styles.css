@@ -151,7 +151,7 @@ input{
 }
 
 .submit:hover{
-    background-color: #B79677;
+    background-color: #abb8af;
     border: 2px solid black;
     transition: 0.4s;
 }
@@ -175,14 +175,14 @@ input{
     padding: 15px;
     margin:auto;
     font-size: 15px;
-    background-color: #B79677;
+    background-color: #abb8af;
     border: 1px solid black;
     border-radius: 12px;
 }
 
 .button__postForm:hover{
     cursor: pointer;
-    background-color: #a58d75;
+    background-color: #abb8af;
 }
 
 .title__added{

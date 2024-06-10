@@ -15,9 +15,15 @@ class bookModel{
     }
 
     static getByID = async(id)=>{
-        const books= await printBookById(id);
-        return books
-    }
+        // try{
+            const books = await readDB();
+            const bookId = books.find(b =>b.id ===(id));
+            if (!bookId){
+                return false;
+            }
+            return bookId
+        }
+        //catch()
 
     static getByName = async(name)=>{
         const books= await printBookByName(name);

@@ -6,7 +6,6 @@ class BookController{
         const getAllBooks= await bookModel.getAll()
         res.send(getAllBooks)
     }
-
     static async getByID(req,res){
         const id = req.params.id;
         const getById= await bookModel.getByID(id)

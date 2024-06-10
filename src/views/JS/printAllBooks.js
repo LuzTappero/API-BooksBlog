@@ -6,10 +6,10 @@ async function printAllBooks(){
         let bookList = books.map(book=>`
         <div class="container__listAll"  data-id="${book.id}">
             <div class= "book__content">
-                <li class="li__description"><h4 class="bookname"> ${book.name}</h4></li>
-                <li class="li__description">ID "${book.id}"</li>
-                <li class="li__description">${book.author}</li>
-                <li class="li__description">${book.category}</li>
+                <li class="li__description"><h4 class="bookname">${book.name}</h4></li>
+                <li class="li__description">ID: "${book.id}"</li>
+                <li class="li__description">Author: ${book.author}</li>
+                <li class="li__description">Category:${book.category}</li>
                 <button class="button__delete">
                     DELETE BOOK
                 </button>
@@ -28,7 +28,7 @@ async function printAllBooks(){
             </head>
             <body>
             <div class="wrapper">
-            <header class="header">HEADER
+            <header class="header">
                     <nav class="navbar">
                         <li class="navbar__item">
                             <a href="/books/" >SEE ALL BOOKS</a>
