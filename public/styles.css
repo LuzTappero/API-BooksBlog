@@ -112,7 +112,6 @@ footer{
 
 /* SHOW FORM-- Upload a new book*/
 
-
 .main__title-form{
    margin: auto;
    text-align: center;
@@ -145,7 +144,8 @@ input{
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    margin: 15px;
+    width: 70%;
+    margin: auto;
     font-size: 15px;
     cursor: pointer;
 }
@@ -160,7 +160,7 @@ input{
 
 /* start book Created OK- Window advice */
 
-.container__modalWindowFromPost{
+.container__advice{
     display: flex;
     flex-direction: column;
     background-color:transparent;
@@ -175,7 +175,6 @@ input{
     padding: 15px;
     margin:auto;
     font-size: 15px;
-    background-color: #abb8af;
     border: 1px solid black;
     border-radius: 12px;
 }
