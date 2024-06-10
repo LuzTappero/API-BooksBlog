@@ -24,13 +24,19 @@ if (filteredBooks.length === 0) {
         </html>`;
     }
     let booksHtml= filteredBooks.map(book=>`     
-    <div class="book__content">
+    <div class="book__content"  data-category="${book.category}">
         <li class="li__description">
             <h4 class="bookname">${book.name}</h4>
         </li>
         <li class="li__description">ID "${book.id}"</li>
         <li class="li__description"> ${book.author}</li>
         <li class="li__description">${book.category}</li>
+        <button class="button__delete">
+                DELETE BOOK
+        </button>
+        <button class="button__update">
+            <a>UPDATE BOOK</a>
+        </button>
     </div>`).join('');
     return `<!DOCTYPE html>
     <html lang="en">
@@ -47,6 +53,7 @@ if (filteredBooks.length === 0) {
             ${booksHtml}
     </div>
     <footer>FOOTER</footer>
+    <script src="/script.js"></script>
     </body>
     </html>`;
 }

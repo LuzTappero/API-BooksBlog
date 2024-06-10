@@ -6,6 +6,7 @@ const printBookByName = require('../views/JS/BooksByName.js')
 const printBookByAuthor = require('../views/JS/booksByAuthor.js');
 const readDB = require('../utils/readDB.js');
 const writeInDB = require('../utils/writeInDB.js');
+const { v4: uuidv4 } = require('uuid');
 
 class bookModel{
     static getAll= async()=>{
@@ -35,7 +36,7 @@ class bookModel{
         try{
             const books= await readDB();
             const newBook= {
-                id: books.length + 1,
+                id: uuidv4(),
                 name: dataBook.name,
                 author: dataBook.author,
                 category: dataBook.category
@@ -50,7 +51,7 @@ class bookModel{
     }
     static async delete (id){
         const books= await readDB()
-        const bookIndex= books.findIndex(book=> book.id === parseInt(id))
+        const bookIndex= books.findIndex(book=> book.id === (id))
         if(bookIndex === -1) return false;
         books.splice(bookIndex, 1)
         await writeInDB(books);
@@ -58,7 +59,7 @@ class bookModel{
     }
     static async update (id, bookData){
         const books= await readDB();
-        const bookIndex= books.findIndex(book=> book.id === parseInt(id))
+        const bookIndex= books.findIndex(book=> book.id === (id))
         if(bookIndex === -1) return false;
         books[bookIndex]={
             ...books[bookIndex],

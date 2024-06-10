@@ -1,5 +1,5 @@
 html, body{
-    background-color: #EBE1D1;
+    background-color: #f1ede9;
     margin:0;
     height: 100%;
 }
@@ -13,12 +13,30 @@ html, body{
 .header{
     text-align: center;
     padding: 35px;
-    background-color: #B79677;
+    background-color: #abb8af;
     color:white;
     font-size: 20px;
     font-weight: bold;
 }
 
+.navbar__item{
+    display: inline-flex;
+    list-style: none;
+    align-items: end;
+    background-color: #d5bea5;
+    padding: 8px 20px;
+    margin: 12px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.navbar__item:hover{
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+
+}
 .main__title{
     text-align: center;
 }
@@ -50,13 +68,14 @@ html, body{
     width: 100px;
     margin-top:15px;
     margin-left:15px;
-    border: 2px solid #3d5856;
+    border: 2px solid #b68e63;
     border-radius: 15px;
     background-color: transparent;
 }
 
 .button__delete:hover, .button__update:hover{
-    background-color: #93a184;
+    background-color: #b68e63;
+    cursor: pointer;
 }
 
 a{
@@ -84,7 +103,7 @@ a:hover{
 
 footer{
     padding: 35px;
-    background-color: #B79677;
+    background-color: #abb8af;
     color:white;
     font-size: 20px;
     font-weight: bold;

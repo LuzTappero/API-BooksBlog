@@ -42,33 +42,15 @@ class BookController{
             console.error('Error', error)
             res.status(500).send({ error: 'Failed to create the new book' });
         }
-
-
-
-
-
-
-
-
-        // try {
-        //     if(!req.body || !req.body.name || !req.body.author || !req.body.category){
-        //         throw new Error('Invalid request body');
-        //     }
-        //     const newBook = await writeBookInJson(req.body);
-        //     return res.redirect('/books')
-        // }catch(error){
-        //     console.error('Error creating book:', error);
-        //     return res.status(500).json({ error: 'Error creating book' });
-        // }
     }
-    static async delete (req,res){
+    static async delete(req,res){
         const id = req.params.id;
         try{
             const result= await bookModel.delete(id)
             if (result === false)
                 {return res.status(404).send({message: "book not found to delete"})
         }
-                return res.send({message: 'Book deleted'})
+                return res.send({message: 'Book deleted succesfully'})
         }
         catch(error){
             console.error(error)

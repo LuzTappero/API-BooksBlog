@@ -1,26 +1,20 @@
 [
   {
-    "id": 1,
-    "name": "Harry Potter",
-    "author": "JK Rowling",
-    "category": "Fantasy"
+    "id": "0a2c5237-195b-4c55-ac1b-737fec187186",
+    "name": "Primer libro",
+    "author": "primer autor",
+    "category": "primera categoria"
   },
   {
-    "id": 2,
-    "name": "Emma",
-    "author": "Jane Austen",
-    "category": "romance"
+    "id": "7d58fe3a-595b-41d4-b139-c59892a7935c",
+    "name": "segundo",
+    "author": "segundo",
+    "category": "segundo"
   },
   {
-    "id": 3,
-    "name": "The Little Prince",
-    "author": "A. de Saint-Exupéry",
-    "category": "Children's Literature"
-  },
-  {
-    "id": 4,
-    "name": "The Name of the Wind",
-    "author": "Patrick Rothfuss",
-    "category": "Fantasy"
+    "id": "32ee0a6a-73a2-4de7-a4a8-17b5e101be41",
+    "name": "Tercero",
+    "author": "tercero",
+    "category": "tercero"
   }
 ]
