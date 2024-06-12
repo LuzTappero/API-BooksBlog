@@ -8,6 +8,8 @@ booksRouter.get('/id/:id', BookController.getByID)
 booksRouter.get('/name/:name', BookController.getByName)
 booksRouter.get('/category/:category', BookController.getByCategory)
 booksRouter.get('/author/:author', BookController.getByauthor)
+booksRouter.get('/home', BookController.home)
+
 
 booksRouter.post('/submit', BookController.create)
 

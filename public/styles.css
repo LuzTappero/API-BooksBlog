@@ -1,7 +1,6 @@
 html, body{
     background-color: #f1ede9;
     margin:0;
-    height: 100%;
 }
 
 .wrapper{
@@ -23,19 +22,17 @@ html, body{
     display: inline-flex;
     list-style: none;
     align-items: end;
-    background-color: #d5bea5;
-    padding: 8px 20px;
-    margin: 12px;
-    font-size: 18px;
+    background-color: #f1ede9;
+    padding: 5px 15px;
+    margin: auto;
+    font-size: 15px;
     border-radius: 12px;
 }
 
 .navbar__item:hover{
     cursor: pointer;
-    border: 3px solid black;
-    border-radius: 20px;
-    transition-duration: 0.2s;
-
+    border: 1px solid black;
+    border-radius: 18px;
 }
 .main__title{
     text-align: center;
@@ -109,6 +106,24 @@ footer{
     font-weight: bold;
     text-align: center;
 }
+
+/* HOME */
+
+.main__div{
+    display: flex;
+    padding: 15px;
+}
+
+.main__p{
+    margin: auto;
+    font-size: 20px;
+}
+
+
+
+
+
+
 
 /* SHOW FORM-- Upload a new book*/
 

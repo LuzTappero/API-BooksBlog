@@ -30,15 +30,21 @@ async function printAllBooks(){
             <div class="wrapper">
             <header class="header">
                     <nav class="navbar">
-                        <li class="navbar__item">
-                            <a href="/books/" >SEE ALL BOOKS</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href='/books/form'>UPLOAD A BOOK</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="/user/register">SINGIN</a>
-                        </li>
+                            <li class="navbar__item">
+                                <a href="/books/home">HOME</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href='/books/form'>PUBLISH</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href='/books'>SEARCH</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/user/register">SIGN IN</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/user/login">LOG IN</a>
+                            </li>
             </nav>
             </header>
                     <h1 class="main__title">All Books</h1>

@@ -6,6 +6,9 @@ class BookController{
         const getAllBooks= await bookModel.getAll()
         res.send(getAllBooks)
     }
+    static async home(req,res){
+        await res.sendFile((path.join(__dirname, '../views/HTML', 'home.html')));
+    }
     static async getByID(req,res){
         const id = req.params.id;
         const getById= await bookModel.getByID(id)
